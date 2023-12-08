@@ -3,8 +3,6 @@ const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     debug: true,
-    purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-    darkMode: false, // or 'media' or 'class'
     theme: {
         screens: {
             sm: '640px',

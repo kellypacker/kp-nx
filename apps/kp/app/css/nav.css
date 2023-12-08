@@ -1,0 +1,64 @@
+.main-nav-mobile {
+    z-index: 11;
+}
+.main-nav-mobile button {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+}
+.main-nav-mobile__artwork {
+    position: absolute;
+    top: 23px;
+    right: 60px;
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: #fff;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav ul li {
+    @apply mx-1 my-2 md:my-0;
+}
+
+nav a {
+    /* transition: background-color .3s ease-in-out; */
+    border-bottom: 1px solid transparent;
+    @apply block text-gray-dark pr-0 mx-3 text-xl md:text-lg;
+}
+nav a:hover {
+    /* background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 3px,
+        #f98b7e 3px,
+        #f98b7e 6px
+); */
+    @apply border-b border-gray-light text-teal;
+}
+nav a:last-child {
+    @apply mr-0;
+}
+@media screen and (min-width: 768px) {
+    nav {
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+    nav ul {
+        flex-direction: row;
+    }
+}
