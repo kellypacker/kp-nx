@@ -1,4 +1,4 @@
-# Org
+# Kelly on Nx
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
@@ -15,6 +15,18 @@ If you happen to use Nx plugins, you can leverage code generators that might com
 Run `nx list` to get a list of available plugins and whether they have generators. Then run `nx list <plugin-name>` to see what generators are available.
 
 Learn more about [Nx generators on the docs](https://nx.dev/plugin-features/use-code-generators).
+
+lib:
+
+```
+npx nx generate @nx/react:library --buildable=true --name=ui --import-path=@kp/ui
+```
+
+component
+
+```
+npx nx generate @nx/react:component --name=contact-banner --directory=ui/src/lib/contact-banner --nameAndDirectoryFormat=as-provided
+```
 
 ## Running tasks
 

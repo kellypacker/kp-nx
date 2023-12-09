@@ -5,6 +5,7 @@
     "scripts": {},
     "private": true,
     "dependencies": {
+        "@contentful/rich-text-react-renderer": "^15.19.0",
         "@fontsource/cormorant-garamond": "^5.0.8",
         "@fontsource/eb-garamond": "^5.0.16",
         "@nx/next": "17.2.0",

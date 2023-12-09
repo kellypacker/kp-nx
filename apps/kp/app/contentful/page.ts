@@ -12,3 +12,16 @@ export const getBlogPosts = async () => {
 
     return items || null;
 };
+
+export const getArtGroups = async () => {
+    const query = {
+        limit: 500,
+        include: 5,
+        content_type: 'artGroups',
+        order: '-fields.publishedAt',
+    };
+
+    const { items } = await getClient().getEntries(query);
+
+    return items || null;
+};
