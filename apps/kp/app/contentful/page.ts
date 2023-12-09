@@ -25,3 +25,15 @@ export const getArtGroups = async () => {
 
     return items || null;
 };
+
+export const getAbout = async () => {
+    const query = {
+        limit: 1,
+        include: 5,
+        content_type: 'about',
+    };
+
+    const { items } = await getClient().getEntries(query);
+
+    return items || null;
+};

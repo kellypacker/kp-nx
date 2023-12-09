@@ -26,7 +26,7 @@ const ArtGroup = ({ artGroup }) => {
         <ArtworkContainerStyled className="py-8">
             <div>
                 <Link href={`/artwork/series/${artGroup.fields.slug}`}>
-                    <section className="p-[3px] border border-gray-md">
+                    <figure className="p-[3px] border border-gray-md">
                         <Image
                             className="aspect-square"
                             width={600}
@@ -35,7 +35,7 @@ const ArtGroup = ({ artGroup }) => {
                             src={`https:${artGroup.fields.image.fields.file.url}`}
                             alt={artGroup.fields.image.fields.title || ''}
                         />
-                    </section>
+                    </figure>
                 </Link>
             </div>
             <div className="">
