@@ -1,3 +1,4 @@
+import Footer from './components/footer';
 import Navigation from './components/navigation';
 import './global.css';
 import '@fontsource/eb-garamond';
@@ -23,7 +24,7 @@ export default function RootLayout({
                 <div className="container px-3 mx-auto">
                     <Navigation />
                     {children}
-                    {/* <Footer /> */}
+                    <Footer />
                 </div>
             </body>
         </html>
