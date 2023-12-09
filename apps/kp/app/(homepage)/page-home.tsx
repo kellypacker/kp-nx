@@ -1,6 +1,7 @@
 'use client';
 import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
 
 type PageHomeProps = {
     posts: any;
@@ -20,18 +21,25 @@ export function PageHome(props: PageHomeProps) {
 
     return (
         <ContainerStyled>
-            {/* <SEO title="Home" /> */}
             {posts.map((post) => {
-                // const image = getImage(post.image);
                 return (
-                    <div className="pt-4 pb-8" key={post.id}>
+                    <div className="pt-4 pb-8 relative" key={post.id}>
                         <h2 className="mt-4 mb-2 text-3xl leading-8">
                             {post.fields.title}
                         </h2>
                         <ReactMarkdown className="mb-4">
                             {post.fields.description}
                         </ReactMarkdown>
-                        {/* <GatsbyImage image={image} alt={post.image.title} /> */}
+                        <section className="image-container-responsive">
+                            <Image
+                                className="image-responsive"
+                                fill
+                                quality={75}
+                                sizes={'50vw'}
+                                src={`https:${post.fields.image.fields.file.url}`}
+                                alt={post.fields.image.fields.title || ''}
+                            />
+                        </section>
                     </div>
                 );
             })}

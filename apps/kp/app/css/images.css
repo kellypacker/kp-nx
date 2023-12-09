@@ -1,0 +1,22 @@
+img,
+svg {
+    max-width: 100%;
+    /* height: auto!important; */
+}
+/* 
+    https://dev.to/felixhaeberle/responsive-fix-for-the-next-js-image-component-1351
+    next.js requires height and width for responsive images - this gets around that
+    set layout="fill" instead of layout="response"
+*/
+.image-container-responsive {
+    width: 100%;
+}
+.image-container-responsive > span {
+    position: unset !important;
+}
+.image-container-responsive .image-responsive {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}

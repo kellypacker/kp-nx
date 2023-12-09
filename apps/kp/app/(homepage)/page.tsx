@@ -25,7 +25,6 @@ import PageHome from './page-home';
 
 export default async function Index() {
     const posts = await getBlogPosts();
-    // const page = await getHomePageData();
 
     return <PageHome posts={posts} />;
 }
