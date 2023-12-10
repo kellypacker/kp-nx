@@ -81,7 +81,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                 <div className="w-full md:w-2/3">
                     <section className="image-container-responsive">
                         <Image
-                            className="image-responsive"
+                            className="image-responsive max-h-screen"
                             fill
                             quality={75}
                             sizes={'75vw'}
