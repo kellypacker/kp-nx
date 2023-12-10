@@ -1,0 +1,10 @@
+.art-series {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem 2rem;
+    border-bottom: 1px solid #dbd9d8;
+    margin-bottom: 40px;
+    :last-of-type {
+        border-bottom: none;
+    }
+}

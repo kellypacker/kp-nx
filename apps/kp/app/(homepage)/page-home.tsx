@@ -1,24 +1,18 @@
 'use client';
-import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
+import styles from './home.module.css';
 
 type PageHomeProps = {
     posts: any;
 };
-
-const ContainerStyled = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1rem 2rem;
-`;
 
 export function PageHome(props: PageHomeProps) {
     const { posts } = props;
     if (!posts) return null;
 
     return (
-        <ContainerStyled>
+        <div className={styles['container']}>
             {posts.map((post: any) => {
                 return (
                     <div className="pt-4 pb-8 relative" key={post.id}>
@@ -41,7 +35,7 @@ export function PageHome(props: PageHomeProps) {
                     </div>
                 );
             })}
-        </ContainerStyled>
+        </div>
     );
 }
 

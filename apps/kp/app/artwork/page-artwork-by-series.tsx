@@ -1,29 +1,14 @@
 'use client';
 import * as React from 'react';
-import styled from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { mediaQueries } from '../utils/media-queries';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const ArtworkContainerStyled = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 600px));
-    grid-gap: 1rem 2rem;
-    border-bottom: 1px solid #dbd9d8;
-    &:last-of-type {
-        border-bottom: none;
-    }
-    @media screen and (min-width: 768px) {
-        grid-template-columns: 300px minmax(auto, 700px);
-        /* grid-template-columns: repeat(2, minmax(200px, 300px)); */
-    }
-`;
+import styles from './page-artwork-by-series.module.css';
 
 const ArtGroup = ({ artGroup }: { artGroup: any }) => {
     return (
-        <ArtworkContainerStyled className="py-8">
+        <div className={styles['art-group']}>
             <Link href={`/artwork/series/${artGroup.fields.slug}`}>
                 <figure className="p-[3px] border border-gray-md w-full md:w-[300px] inline-block">
                     <Image
@@ -57,7 +42,7 @@ const ArtGroup = ({ artGroup }: { artGroup: any }) => {
                     </>
                 )}
             </div>
-        </ArtworkContainerStyled>
+        </div>
     );
 };
 

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import styled from 'styled-components';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -8,25 +7,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { mediaQueries } from '../../utils/media-queries';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const HeaderStyles = styled.div`
-    flex-flow: row wrap;
-    & > * {
-        flex: 1 100%;
-        @media screen and (min-width: 768px) {
-            flex: 2;
-        }
-    }
-    .pagination {
-        a:hover {
-            background-color: #f3f3f3;
-        }
-        a[disabled] {
-            pointer-events: none;
-            opacity: 0.3;
-        }
-    }
-`;
+import styles from './artwork.module.css';
 
 type PageArtworkProps = {
     artworks: any;
@@ -44,8 +25,8 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
 
     return (
         <>
-            <HeaderStyles
-                className="flex flex-col items-baseline justify-between mb-4 md:flex-row"
+            <div
+                className={`${styles['header']} flex flex-col items-baseline justify-between mb-4 md:flex-row`}
                 style={{ flexFlow: 'row wrap' }}
             >
                 <h2 className="mt-4 mb-5 text-xl text-center md:text-3xl md:text-left">
@@ -94,7 +75,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                         <ChevronRightIcon className="h-4 w-4 text-salmon inline group-hover:text-teal" />
                     </Link>
                 </div>
-            </HeaderStyles>
+            </div>
 
             <div className="flex flex-col pb-8 md:flex-row">
                 <div className="w-full md:w-2/3">

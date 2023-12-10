@@ -1,18 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import styled from 'styled-components';
-
-const ContainerStyled = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 2rem 2rem;
-    border-bottom: 1px solid #dbd9d8;
-    margin-bottom: 40px;
-    :last-of-type {
-        border-bottom: none;
-    }
-`;
+import styles from './page-series.module.css';
 
 export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
     const artworks = order.fields.artworks;
@@ -23,7 +12,7 @@ export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
                 <span className="text-lg font-normal uppercase">Series:</span>{' '}
                 {artGroup.fields.title}
             </h1>
-            <ContainerStyled className="pt-3">
+            <div className={`${styles['art-series']} pt-3`}>
                 {artworks.map((artwork: any) => {
                     // const image = getImage(artwork.image);
                     return (
@@ -51,7 +40,7 @@ export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
                         </div>
                     );
                 })}
-            </ContainerStyled>
+            </div>
         </>
     );
 }
