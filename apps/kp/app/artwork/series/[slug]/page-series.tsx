@@ -16,7 +16,6 @@ const ContainerStyled = styled.div`
 
 export function PageSeries({ artGroup, order }) {
     const artworks = order.fields.artworks;
-    console.log(artworks);
 
     return (
         <>

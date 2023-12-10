@@ -5,6 +5,7 @@
     "scripts": {},
     "private": true,
     "dependencies": {
+        "@contentful/rich-text-html-renderer": "^16.3.0",
         "@contentful/rich-text-react-renderer": "^15.19.0",
         "@fontsource/cormorant-garamond": "^5.0.8",
         "@fontsource/eb-garamond": "^5.0.16",
@@ -21,6 +22,7 @@
         "tslib": "^2.3.0"
     },
     "devDependencies": {
+        "@heroicons/react": "^2.0.18",
         "@nx/cypress": "17.2.0",
         "@nx/eslint": "17.2.0",
         "@nx/eslint-plugin": "17.2.0",

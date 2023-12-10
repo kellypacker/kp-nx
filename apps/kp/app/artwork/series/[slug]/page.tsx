@@ -20,8 +20,6 @@ export async function generateMetadata(props: Props) {
 }
 
 export default async function Index({ params }: { params: { slug: string } }) {
-    console.log('page', params.slug);
-
     const artGroup = await getArtGroup(params.slug);
     const order = await getArtworkOrderForArtGroup(artGroup.sys.id);
 

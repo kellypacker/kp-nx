@@ -1,7 +1,7 @@
 // import type { Metadata, ResolvingMetadata } from 'next';
 
 import { getArtGroups } from '../contentful/data';
-import PageArtwork from './page-artwork';
+import PageArtworkBySeries from './page-artwork-by-series';
 
 type Props = {
     params: { id: string };
@@ -19,5 +19,5 @@ export async function generateMetadata(props: Props) {
 export default async function Index() {
     const artGroups = await getArtGroups();
 
-    return <PageArtwork artGroups={artGroups} />;
+    return <PageArtworkBySeries artGroups={artGroups} />;
 }

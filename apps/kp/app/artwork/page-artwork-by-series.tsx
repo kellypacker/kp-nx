@@ -61,7 +61,7 @@ const ArtGroup = ({ artGroup }) => {
     );
 };
 
-export const PageArtwork = ({ artGroups }) => {
+export const PageArtworkBySeries = ({ artGroups }) => {
     if (!artGroups) return null;
 
     return (
@@ -77,4 +77,4 @@ export const PageArtwork = ({ artGroups }) => {
     );
 };
 
-export default PageArtwork;
+export default PageArtworkBySeries;

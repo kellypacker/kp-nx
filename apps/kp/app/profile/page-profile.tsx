@@ -14,14 +14,7 @@ const ProfileStyled = styled.div`
     }
 `;
 
-const ImgContainer = styled.div`
-    border: 1px solid #dbd9d8;
-    padding: 3px;
-`;
-
 export const PageProfile = ({ about }) => {
-    console.log({ about });
-
     return (
         <>
             {/* <SEO

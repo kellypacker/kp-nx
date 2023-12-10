@@ -14,8 +14,6 @@ const ContainerStyled = styled.div`
 `;
 
 export function PageHome(props: PageHomeProps) {
-    console.log('PageHome props', props);
-
     const { posts } = props;
     if (!posts) return null;
 

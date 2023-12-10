@@ -27,8 +27,6 @@ export const getArtGroups = async () => {
 };
 
 export const getArtGroup = async (slug: string) => {
-    console.log('getArtGroup', slug);
-
     const query = {
         limit: 1,
         include: 5,
@@ -40,14 +38,24 @@ export const getArtGroup = async (slug: string) => {
     return items[0] || null;
 };
 
-export const getArtworkOrderForArtGroup = async (id: string) => {
-    console.log('getArtworkOrderForArtGroup', id);
-
+export const getArtworkOrderForArtGroup = async (artGroupId: string) => {
     const query = {
         limit: 100,
         include: 5,
         content_type: 'artworkOrder',
-        'fields.artGroup.sys.id': id,
+        'fields.artGroup.sys.id': artGroupId,
+    };
+
+    const { items } = await getClient().getEntries(query);
+    return items[0] || null;
+};
+
+export const getArtwork = async (slug: string) => {
+    const query = {
+        limit: 1,
+        include: 5,
+        content_type: 'artwork',
+        'fields.slug': slug,
     };
 
     const { items } = await getClient().getEntries(query);
