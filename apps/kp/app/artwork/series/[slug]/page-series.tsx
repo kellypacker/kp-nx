@@ -24,7 +24,7 @@ export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
                             <Link href={`/artwork/${artwork.fields.slug}`}>
                                 <section className="image-container-responsive">
                                     <Image
-                                        className="image-responsive"
+                                        className="image-responsive min-h-[200px]"
                                         fill
                                         quality={75}
                                         sizes={'50vw'}
