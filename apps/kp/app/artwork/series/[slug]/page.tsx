@@ -14,7 +14,7 @@ export async function generateMetadata(props: Props) {
     const artGroup = (await getArtGroup(props.params.slug)) as any;
 
     return {
-        title: `Series: ${artGroup.fields.title}`,
+        title: `Artwork Series: ${artGroup.fields.title}`,
         description: `Artwork for the series: ${artGroup.fields.title}`,
     };
 }
