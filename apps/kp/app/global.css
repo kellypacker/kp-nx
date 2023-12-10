@@ -31,7 +31,7 @@
         @apply text-2xl leading-7;
     }
     a {
-        @apply text-salmon;
+        @apply text-salmon underline hover:no-underline;
     }
     a:hover {
         @apply text-teal;

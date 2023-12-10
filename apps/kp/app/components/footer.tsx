@@ -15,7 +15,7 @@ const Footer = () => {
                 <li>
                     <a
                         href="https://www.etsy.com/shop/kellypacker/"
-                        className="text-xl"
+                        className="text-xl no-underline"
                     >
                         Etsy Shop
                     </a>

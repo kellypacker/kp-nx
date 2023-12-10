@@ -41,7 +41,7 @@ const Navigation = () => {
             <div className="flex items-center justify-between pt-4 pb-2 border-b main-header border-gray-md">
                 <Link
                     href="/"
-                    className="ml-1 text-3xl"
+                    className="ml-1 text-3xl no-underline"
                     style={{ lineHeight: 1.2, zIndex: 11 }}
                 >
                     Kelly Packer

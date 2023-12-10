@@ -42,7 +42,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                         tabIndex={!prevArtwork ? -1 : undefined}
                         className={`${
                             !prevArtwork ? 'pointer-events-none opacity-30' : ''
-                        } py-1 pl-1 pr-2 mr-3 border text-md md:text-lg border-gray-md group`}
+                        } py-1 pl-1 pr-2 mr-3 border text-md md:text-lg border-gray-md group no-underline`}
                         href={
                             prevArtwork
                                 ? `/artwork/${prevArtwork.fields.slug}`
@@ -53,7 +53,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                         Prev
                     </Link>
                     <Link
-                        className="px-2 py-1 border text-md md:text-lg border-gray-md"
+                        className="px-2 py-1 border text-md md:text-lg border-gray-md no-underline"
                         href={`/artwork/series/${artwork.fields.artGroup.fields.slug}`}
                     >
                         - All Artwork in Series -
@@ -64,7 +64,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                         tabIndex={!nextArtwork ? -1 : undefined}
                         className={`${
                             !nextArtwork ? 'pointer-events-none opacity-30' : ''
-                        } group py-1 pl-2 pr-1 ml-3 border text-md md:text-lg border-gray-md`}
+                        } group py-1 pl-2 pr-1 ml-3 border text-md md:text-lg border-gray-md no-underline`}
                         href={
                             nextArtwork
                                 ? `/artwork/${nextArtwork.fields.slug}`
