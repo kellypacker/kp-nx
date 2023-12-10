@@ -7,10 +7,6 @@ import Image from 'next/image';
 export const PageProfile = ({ about }: { about: any }) => {
     return (
         <>
-            {/* <SEO
-                title="Profile"
-                description="Profile of Kelly Packer, artist and web developer. Includes artist statement and background."
-            /> */}
             <h1 className="mt-4 mb-2 text-3xl">
                 Artist <em>and</em> Web Developer
             </h1>
@@ -18,7 +14,7 @@ export const PageProfile = ({ about }: { about: any }) => {
                 <div>
                     <figure className="p-[3px] border border-gray-md">
                         <Image
-                            className="ratio-square"
+                            className="ratio-square m-h-[300px]"
                             width={600}
                             height={600}
                             src={`https:${about.fields.profileImage.fields.file.url}`}
