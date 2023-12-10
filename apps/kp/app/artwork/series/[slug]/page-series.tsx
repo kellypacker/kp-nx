@@ -32,9 +32,9 @@ export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
                                         alt={''}
                                     />
                                 </section>
-                                <h3 className="py-2 text-lg text-center">
+                                <h2 className="py-2 text-lg text-center">
                                     {artwork.fields.title}
-                                </h3>
+                                </h2>
                             </Link>
                         </div>
                     );
