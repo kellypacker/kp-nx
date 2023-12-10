@@ -1,4 +1,3 @@
-import { getAbout } from '../contentful/page';
 import PageContact from './page-contact';
 
 type Props = {
@@ -15,7 +14,5 @@ export async function generateMetadata(props: Props) {
 }
 
 export default async function Index() {
-    const about = await getAbout();
-
-    return <PageContact about={about[0]} />;
+    return <PageContact />;
 }

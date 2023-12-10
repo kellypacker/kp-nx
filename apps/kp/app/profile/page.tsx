@@ -1,4 +1,4 @@
-import { getAbout } from '../contentful/page';
+import { getAbout } from '../contentful/data';
 import PageProfile from './page-profile';
 
 type Props = {

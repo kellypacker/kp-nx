@@ -1,6 +1,6 @@
 // import type { Metadata, ResolvingMetadata } from 'next';
 
-import { getArtGroups } from '../contentful/page';
+import { getArtGroups } from '../contentful/data';
 import PageArtwork from './page-artwork';
 
 type Props = {
