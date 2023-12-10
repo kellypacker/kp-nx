@@ -15,7 +15,7 @@ const ArtworkContainerStyled = styled.div`
     &:last-of-type {
         border-bottom: none;
     }
-    @media ${mediaQueries.md} {
+    @media screen and (min-width: 768px) {
         grid-template-columns: 300px minmax(auto, 700px);
         /* grid-template-columns: repeat(2, minmax(200px, 300px)); */
     }

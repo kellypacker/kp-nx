@@ -13,7 +13,7 @@ const HeaderStyles = styled.div`
     flex-flow: row wrap;
     & > * {
         flex: 1 100%;
-        @media ${mediaQueries.md} {
+        @media screen and (min-width: 768px) {
             flex: 2;
         }
     }

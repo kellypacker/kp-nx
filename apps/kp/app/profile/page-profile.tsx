@@ -9,7 +9,7 @@ const ProfileStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 600px));
     grid-gap: 2rem 2rem;
-    @media ${mediaQueries.md} {
+    @media screen and (min-width: 768px) {
         grid-template-columns: 300px minmax(auto, 700px);
     }
 `;
