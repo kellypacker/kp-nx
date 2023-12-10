@@ -33,7 +33,6 @@ const PageArtwork = ({ artworks, artwork }) => {
 
     const prevArtwork = artworks[currentIndex - 1];
     const nextArtwork = artworks[currentIndex + 1];
-    console.log(currentIndex, prevArtwork, nextArtwork);
     // const image = getImage(artwork.image);
 
     return (
@@ -97,7 +96,7 @@ const PageArtwork = ({ artworks, artwork }) => {
                             className="image-responsive"
                             fill
                             quality={75}
-                            sizes={'50vw'}
+                            sizes={'75vw'}
                             src={`https:${artwork.fields.image.fields.file.url}`}
                             alt={artwork.fields.image.fields.title || ''}
                         />
