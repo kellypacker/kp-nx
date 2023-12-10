@@ -11,8 +11,8 @@ export async function generateMetadata(props: Props) {
     const artwork = (await getArtwork(props.params.slug)) as any;
 
     return {
-        title: `Artwork: ${artwork.fields.title}`,
-        description: `Artwork: ${artwork.fields.title} ${artwork.fields.medium.name} ${artwork.fields.year}`,
+        title: `Artwork by Kelly Packer: ${artwork.fields.title}`,
+        description: `Artwork by Kelly Packer: ${artwork.fields.title} ${artwork.fields.medium.name} ${artwork.fields.year}`,
     };
 }
 
