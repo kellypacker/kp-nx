@@ -1,0 +1,33 @@
+.nav {
+    a[aria-current='page'] {
+        color: #78736f;
+        border-bottom: 1px solid #f98b7e;
+        background-color: #f3f3f3;
+        span {
+            border-right: 15px solid rgba(214, 188, 63, 0.2);
+        }
+    }
+}
+
+.artwork-bg {
+    display: inline-block;
+    padding: 0;
+    border-bottom: 1px solid transparent;
+    border-right: 15px solid transparent;
+    border-left: 1px solid transparent;
+    margin-left: -5px;
+    position: relative;
+    &:after {
+        content: ' ';
+        position: absolute;
+        top: 0px;
+        right: -9px;
+        bottom: 5px;
+        z-index: 10;
+        border-left: 3px dotted #97c9bd;
+    }
+    &:hover {
+        /* background-color: rgba(214, 188, 63, 0.2); */
+        border-right: 15px solid rgba(214, 188, 63, 0.2);
+    }
+}
