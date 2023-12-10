@@ -14,7 +14,7 @@ const ProfileStyled = styled.div`
     }
 `;
 
-export const PageProfile = ({ about }) => {
+export const PageProfile = ({ about }: { about: any }) => {
     return (
         <>
             {/* <SEO

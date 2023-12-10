@@ -21,7 +21,7 @@ const ArtworkContainerStyled = styled.div`
     }
 `;
 
-const ArtGroup = ({ artGroup }) => {
+const ArtGroup = ({ artGroup }: { artGroup: any }) => {
     return (
         <ArtworkContainerStyled className="py-8">
             <div>
@@ -61,7 +61,7 @@ const ArtGroup = ({ artGroup }) => {
     );
 };
 
-export const PageArtworkBySeries = ({ artGroups }) => {
+export const PageArtworkBySeries = ({ artGroups }: { artGroups: any }) => {
     if (!artGroups) return null;
 
     return (
@@ -70,7 +70,7 @@ export const PageArtworkBySeries = ({ artGroups }) => {
                 Artwork <span className="italic lowercase">by</span> Series
             </h1>
 
-            {artGroups.map((group) => (
+            {artGroups.map((group: any) => (
                 <ArtGroup artGroup={group} key={group.sys.id} />
             ))}
         </>

@@ -28,8 +28,15 @@ const HeaderStyles = styled.div`
     }
 `;
 
-const PageArtwork = ({ artworks, artwork }) => {
-    const currentIndex = artworks.findIndex((a) => a.sys.id === artwork.sys.id);
+type PageArtworkProps = {
+    artworks: any;
+    artwork: any;
+};
+
+const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
+    const currentIndex = artworks.findIndex(
+        (a: any) => a.sys.id === artwork.sys.id
+    );
 
     const prevArtwork = artworks[currentIndex - 1];
     const nextArtwork = artworks[currentIndex + 1];

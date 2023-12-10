@@ -19,7 +19,7 @@ export function PageHome(props: PageHomeProps) {
 
     return (
         <ContainerStyled>
-            {posts.map((post) => {
+            {posts.map((post: any) => {
                 return (
                     <div className="pt-4 pb-8 relative" key={post.id}>
                         <h2 className="mt-4 mb-2 text-3xl leading-8">

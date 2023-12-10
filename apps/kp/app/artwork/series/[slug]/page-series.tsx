@@ -14,7 +14,7 @@ const ContainerStyled = styled.div`
     }
 `;
 
-export function PageSeries({ artGroup, order }) {
+export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
     const artworks = order.fields.artworks;
 
     return (
@@ -24,7 +24,7 @@ export function PageSeries({ artGroup, order }) {
                 {artGroup.fields.title}
             </h1>
             <ContainerStyled className="pt-3">
-                {artworks.map((artwork) => {
+                {artworks.map((artwork: any) => {
                     // const image = getImage(artwork.image);
                     return (
                         <div key={artwork.fields.id} className="relative">
