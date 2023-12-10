@@ -14,7 +14,6 @@ export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
             </h1>
             <div className={`${styles['art-series']} pt-3`}>
                 {artworks.map((artwork: any) => {
-                    // const image = getImage(artwork.image);
                     return (
                         <div key={artwork.fields.id} className="relative">
                             {artwork.fields.available && (
@@ -30,7 +29,7 @@ export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
                                         quality={75}
                                         sizes={'50vw'}
                                         src={`https:${artwork.fields.image.fields.file.url}`}
-                                        alt={artwork.fields.title || ''}
+                                        alt={''}
                                     />
                                 </section>
                                 <h3 className="py-2 text-lg text-center">

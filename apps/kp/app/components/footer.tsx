@@ -15,7 +15,7 @@ const Footer = () => {
                 <li>
                     <a
                         href="https://www.etsy.com/shop/kellypacker/"
-                        className="text-xl "
+                        className="text-xl"
                     >
                         Etsy Shop
                     </a>
@@ -24,22 +24,16 @@ const Footer = () => {
                     <a
                         href="http://instagram.com/kellypacker"
                         className="h-6 w-6 inline-block"
+                        title="Instagram"
                     >
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
                 </li>
-                {/* <li>
-                    <a
-                        href="http://twitter.com/kellypacker"
-                        className="h-6 w-6 inline-block"
-                    >
-                        <FontAwesomeIcon icon={faTwitter} />
-                    </a>
-                </li> */}
                 <li>
                     <a
                         href="https://github.com/kellypacker"
                         className="h-6 w-6 inline-block"
+                        title="GitHub"
                     >
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
@@ -47,6 +41,7 @@ const Footer = () => {
                 <li>
                     <a
                         href="https://www.linkedin.com/in/kellypacker/"
+                        title="LinkedIn"
                         className="h-6 w-6 inline-block"
                     >
                         <FontAwesomeIcon icon={faLinkedin} />

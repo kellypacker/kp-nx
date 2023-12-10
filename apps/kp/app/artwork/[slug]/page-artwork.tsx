@@ -86,7 +86,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                             quality={75}
                             sizes={'75vw'}
                             src={`https:${artwork.fields.image.fields.file.url}`}
-                            alt={artwork.fields.image.fields.title || ''}
+                            alt={artwork.fields.title || ''}
                         />
                     </section>
                 </div>
