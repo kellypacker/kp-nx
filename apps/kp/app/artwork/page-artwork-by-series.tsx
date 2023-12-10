@@ -33,6 +33,8 @@ const ArtGroup = ({ artGroup }: { artGroup: any }) => {
                         quality={75}
                         src={`https:${artGroup.fields.image.fields.file.url}`}
                         alt={artGroup.fields.image.fields.title || ''}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP82V1XDwAHCgKDYKnZXgAAAABJRU5ErkJggg=="
                     />
                 </figure>
             </Link>
