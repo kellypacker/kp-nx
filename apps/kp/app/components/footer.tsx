@@ -28,14 +28,14 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
                 </li>
-                <li>
+                {/* <li>
                     <a
                         href="http://twitter.com/kellypacker"
                         className="h-6 w-6 inline-block"
                     >
                         <FontAwesomeIcon icon={faTwitter} />
                     </a>
-                </li>
+                </li> */}
                 <li>
                     <a
                         href="https://github.com/kellypacker"
