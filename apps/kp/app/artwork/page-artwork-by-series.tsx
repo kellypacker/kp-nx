@@ -24,20 +24,18 @@ const ArtworkContainerStyled = styled.div`
 const ArtGroup = ({ artGroup }: { artGroup: any }) => {
     return (
         <ArtworkContainerStyled className="py-8">
-            <div>
-                <Link href={`/artwork/series/${artGroup.fields.slug}`}>
-                    <figure className="p-[3px] border border-gray-md">
-                        <Image
-                            className="aspect-square"
-                            width={600}
-                            height={600}
-                            quality={75}
-                            src={`https:${artGroup.fields.image.fields.file.url}`}
-                            alt={artGroup.fields.image.fields.title || ''}
-                        />
-                    </figure>
-                </Link>
-            </div>
+            <Link href={`/artwork/series/${artGroup.fields.slug}`}>
+                <figure className="p-[3px] border border-gray-md w-full md:w-[300px] inline-block">
+                    <Image
+                        className="aspect-square"
+                        width={600}
+                        height={600}
+                        quality={75}
+                        src={`https:${artGroup.fields.image.fields.file.url}`}
+                        alt={artGroup.fields.image.fields.title || ''}
+                    />
+                </figure>
+            </Link>
             <div className="">
                 <h2 className="pb-2 font-serif text-2xl font-bold text-salmon">
                     <Link href={`/artwork/series/${artGroup.fields.slug}`}>
