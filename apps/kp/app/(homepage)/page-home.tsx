@@ -24,7 +24,7 @@ export function PageHome(props: PageHomeProps) {
                         </ReactMarkdown>
                         <section className="image-container-responsive">
                             <Image
-                                className="image-responsive"
+                                className="image-responsive min-h-[200px]"
                                 fill
                                 quality={75}
                                 sizes={'50vw'}
