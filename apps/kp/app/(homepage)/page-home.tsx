@@ -9,13 +9,14 @@ type PageHomeProps = {
 
 export function PageHome(props: PageHomeProps) {
     const { posts } = props;
+
     if (!posts) return null;
 
     return (
         <div className={styles['container']}>
             {posts.map((post: any) => {
                 return (
-                    <div className="pt-4 pb-8 relative" key={post.id}>
+                    <div className="relative pt-4 pb-8" key={post.sys.id}>
                         <h2 className="mt-4 mb-2 text-3xl leading-8">
                             {post.fields.title}
                         </h2>
