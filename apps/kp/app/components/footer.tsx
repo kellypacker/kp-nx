@@ -10,8 +10,8 @@ import {
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     return (
-        <footer className="flex flex-col items-baseline py-3 border-t md:flex-row md:justify-between border-gray-md pb-10">
-            <ul className="flex space-x-4 items-center">
+        <footer className="flex flex-col items-baseline py-3 pb-10 border-t md:flex-row md:justify-between border-gray-md">
+            <ul className="flex items-center space-x-4">
                 <li>
                     <a
                         href="https://www.etsy.com/shop/kellypacker/"
@@ -23,7 +23,7 @@ const Footer = () => {
                 <li>
                     <a
                         href="http://instagram.com/kellypacker"
-                        className="h-6 w-6 inline-block"
+                        className="inline-block w-6 h-6"
                         title="Instagram"
                     >
                         <FontAwesomeIcon icon={faInstagram} />
@@ -32,7 +32,7 @@ const Footer = () => {
                 <li>
                     <a
                         href="https://github.com/kellypacker"
-                        className="h-6 w-6 inline-block"
+                        className="inline-block w-6 h-6"
                         title="GitHub"
                     >
                         <FontAwesomeIcon icon={faGithub} />
@@ -42,7 +42,7 @@ const Footer = () => {
                     <a
                         href="https://www.linkedin.com/in/kellypacker/"
                         title="LinkedIn"
-                        className="h-6 w-6 inline-block"
+                        className="inline-block w-6 h-6"
                     >
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
