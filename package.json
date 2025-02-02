@@ -10,7 +10,7 @@
         "@fontsource/cormorant-garamond": "^5.0.8",
         "@fontsource/eb-garamond": "^5.0.16",
         "@fortawesome/fontawesome-svg-core": "^6.7.2",
-        "@fortawesome/free-brands-svg-icons": "^6.5.1",
+        "@fortawesome/free-brands-svg-icons": "^6.7.2",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@nx/next": "20.3.3",
         "next": "14.2.3",
