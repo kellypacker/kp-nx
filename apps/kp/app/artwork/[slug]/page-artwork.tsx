@@ -8,6 +8,7 @@ import { mediaQueries } from '../../utils/media-queries';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './artwork.module.css';
+import { richTextRender } from '../../components/rich-text-renderer';
 
 type PageArtworkProps = {
     artworks: any;
@@ -49,11 +50,11 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                                 : ''
                         }
                     >
-                        <ChevronLeftIcon className="h-4 w-4 text-salmon inline group-hover:text-teal" />
+                        <ChevronLeftIcon className="inline w-4 h-4 text-salmon group-hover:text-teal" />
                         Prev
                     </Link>
                     <Link
-                        className="px-2 py-1 border text-md md:text-lg border-gray-md no-underline"
+                        className="px-2 py-1 no-underline border text-md md:text-lg border-gray-md"
                         href={`/artwork/series/${artwork.fields.artGroup.fields.slug}`}
                     >
                         - All Artwork in Series -
@@ -72,7 +73,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                         }
                     >
                         Next
-                        <ChevronRightIcon className="h-4 w-4 text-salmon inline group-hover:text-teal" />
+                        <ChevronRightIcon className="inline w-4 h-4 text-salmon group-hover:text-teal" />
                     </Link>
                 </div>
             </div>
@@ -81,7 +82,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                 <div className="w-full md:w-2/3">
                     <section className="image-container-responsive">
                         <Image
-                            className="image-responsive max-h-screen"
+                            className="max-h-screen image-responsive"
                             fill
                             quality={75}
                             sizes={'75vw'}
@@ -92,21 +93,16 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                 </div>
 
                 <div className="w-full pl-0 text-center md:w-1/3 md:pl-6 md:text-left">
-                    {!artwork.fields.longTitle?.raw && artwork.fields.title && (
-                        <h1 className="pt-3 mb-2 text-lg md:pt-0">
+                    {artwork.fields.title && (
+                        <h1 className={`pt-3 mb-4 text-xl md:pt-0 font-bold`}>
                             {artwork.fields.title}
                         </h1>
                     )}
-                    {artwork.fields.longTitle?.raw && (
+                    {artwork.fields.longTitle && (
                         <div>
-                            <div
-                                className="artwork-long-title"
-                                dangerouslySetInnerHTML={{
-                                    __html: documentToHtmlString(
-                                        JSON.parse(artwork.longTitle.raw)
-                                    ),
-                                }}
-                            ></div>
+                            <div className="text-lg artwork-long-title">
+                                {richTextRender(artwork.fields.longTitle)}
+                            </div>
                         </div>
                     )}
                     {/* {artwork.longTitle &&
