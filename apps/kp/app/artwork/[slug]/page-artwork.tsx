@@ -112,7 +112,7 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                     <p className="pb-0">
                         {artwork.fields.height}" x {artwork.fields.width}"
                     </p>
-                    <p className="pb-0">{artwork.fields.medium.name}</p>
+                    <p className="pb-0">{artwork.fields.medium.fields.name}</p>
                     <p className="pb-0">{artwork.fields.year}</p>
                     {artwork.fields.available &&
                         artwork.fields.price &&
