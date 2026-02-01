@@ -114,9 +114,9 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                     </p>
                     <p className="pb-0">{artwork.fields.medium.fields.name}</p>
                     <p className="pb-0">{artwork.fields.year}</p>
-                    {artwork.fields.available &&
-                        artwork.fields.price &&
-                        `$${artwork.fields.price}`}
+                    {artwork.fields.available && artwork.fields.price && (
+                        <p className="pb-0">${artwork.fields.price}</p>
+                    )}
                     {artwork.fields.available && artwork.fields.linkToBuy && (
                         <div className="mt-2">
                             <a href={artwork.fields.linkToBuy}>
