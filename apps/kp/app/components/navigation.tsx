@@ -56,6 +56,16 @@ const Navigation = () => {
                         <ul>
                             <li>
                                 <Link
+                                    href="artwork/series/here-living-again-living-here"
+                                    onClick={handleMobileNavToggle}
+                                >
+                                    <span className={styles['artwork-bg']}>
+                                        Available
+                                    </span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     href="/artwork"
                                     onClick={handleMobileNavToggle}
                                 >
