@@ -110,8 +110,16 @@ const PageArtwork = ({ artworks, artwork }: PageArtworkProps) => {
                             JSON.parse(artwork.longTitle.raw)
                         )} */}
                     <p className="pb-0">
-                        {artwork.fields.height}" x {artwork.fields.width}"
+                        {artwork.fields.height}&quot; x {artwork.fields.width}
+                        &quot;
                     </p>
+                    {artwork.fields.framedHeight &&
+                        artwork.fields.framedWidth && (
+                            <p className="pb-0">
+                                {artwork.fields.framedHeight}&quot; x{' '}
+                                {artwork.fields.framedWidth}&quot; (framed)
+                            </p>
+                        )}
                     <p className="pb-0">{artwork.fields.medium.fields.name}</p>
                     <p className="pb-0">{artwork.fields.year}</p>
                     {artwork.fields.available && artwork.fields.price && (
