@@ -16,6 +16,12 @@ const Navigation = () => {
     return (
         <>
             <div className="relative block main-nav-mobile md:hidden">
+                <Link
+                    className="main-nav-mobile__artwork-available"
+                    href="/artwork/series/here-living-again-living-here"
+                >
+                    <span className={styles['artwork-bg']}>Available</span>
+                </Link>
                 <Link className="main-nav-mobile__artwork" href="/artwork">
                     <span className={styles['artwork-bg']}>Artwork</span>
                 </Link>
