@@ -8,7 +8,7 @@ export function PageSeries({ artGroup, order }: { artGroup: any; order: any }) {
 
     return (
         <>
-            <h1 className="mt-4 mb-2 text-3xl">
+            <h1 className="mt-4 mb-2 text-3xl leading-tight">
                 <span className="text-lg font-normal uppercase">Series:</span>{' '}
                 {artGroup.fields.title}
             </h1>
